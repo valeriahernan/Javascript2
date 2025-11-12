@@ -17,3 +17,9 @@ $("#nombre").blur(function() {
 $("#mensaje").mouseover(function() {
   $(this).css("color", "red");
 });
+
+// HOVER
+$("#textoColor").hover(
+  function() { $(this).css("color", "red"); },
+  function() { $(this).css("color", "black"); }
+);
