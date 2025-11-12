@@ -1,14 +1,19 @@
-// evento clic
+// CLICK
 $("#btnSaludo").click(function() {
-alert("Hola, hiciste clic en el botón");
-));
-//evento focus
-$("#nombre").focus(function(){
-$(this).css("border", "2px solid blue");
+  alert("Hola, hiciste clic en el botón");
 });
-//evento blur
-$("#nombre").blur(function(){
-alert("Has salido del campo nombre")
+
+// FOCUS
+$("#nombre").focus(function() {
+  $(this).css("border", "2px solid blue");
 });
-//mouseover
-$("#mensaje").mouseover (function (){ $(this).css("color", "red")
+
+// BLUR
+$("#nombre").blur(function() {
+  alert("Has salido del campo nombre");
+});
+
+// MOUSEOVER
+$("#mensaje").mouseover(function() {
+  $(this).css("color", "red");
+});
