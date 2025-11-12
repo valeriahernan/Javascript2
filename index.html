@@ -4,16 +4,84 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Eventos jQuery</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+
+  <style>
+    body {
+      font-family: "Poppins", sans-serif;
+      background: linear-gradient(135deg, #d1c4e9, #b2dfdb);
+      height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .card {
+      background: #ffffffd9;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+      border-radius: 20px;
+      padding: 2rem;
+      width: 400px;
+      text-align: center;
+    }
+
+    button, input, select {
+      margin-top: 10px;
+    }
+
+    p {
+      font-size: 18px;
+      transition: color 0.3s ease;
+    }
+
+    #dobleClick {
+      cursor: pointer;
+      color: #673ab7;
+      font-weight: 600;
+    }
+
+    #formulario {
+      margin-top: 20px;
+    }
+  </style>
 </head>
+
 <body>
-  <!-- CLICK -->
-  <button id="btnSaludo">Haz clic aquí</button>
+  <div class="card">
+    <h2 class="mb-3 text-primary">Eventos con jQuery</h2>
 
-  <!-- FOCUS -->
-  <input type="text" id="nombre" placeholder="Escribe tu nombre acáaa">
+    <!-- CLICK -->
+    <button id="btnSaludo" class="btn btn-success w-100">Haz clic aquí</button>
 
-  <!-- MOUSEOVER -->
-  <p id="mensaje">Pasa el mouse por aquí</p>
+    <!-- FOCUS y BLUR -->
+    <input type="text" id="nombre" class="form-control" placeholder="Escribe tu nombre">
+
+    <!-- MOUSEOVER / MOUSEOUT -->
+    <p id="mensaje">Pasa el mouse por aquí</p>
+
+    <!-- HOVER -->
+    <p id="textoColor">Coloca el mouse sobre este texto</p>
+
+    <!-- DOUBLE CLICK -->
+    <p id="dobleClick">Haz doble clic sobre mí</p>
+
+    <!-- KEYDOWN / KEYUP -->
+    <input type="text" id="inputKey" class="form-control" placeholder="Presiona una tecla">
+
+    <!-- SELECT / CHANGE -->
+    <select id="selectOpcion" class="form-select">
+      <option selected disabled>Selecciona una opción</option>
+      <option value="1">Opción 1</option>
+      <option value="2">Opción 2</option>
+      <option value="3">Opción 3</option>
+    </select>
+
+    <!-- FORM / SUBMIT -->
+    <form id="formulario">
+      <input type="text" class="form-control my-2" placeholder="Tu mensaje">
+      <button type="submit" class="btn btn-primary w-100">Enviar</button>
+    </form>
+  </div>
 
   <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
   <script src="assets/index.js"></script>
